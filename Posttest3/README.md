@@ -35,7 +35,7 @@ TAMPILAN MENU LIHAT LAPORAN PENJUALAN
 ![7.png](7.png)
 
 
-menerapkan konsep pewarisan data dan method dari class yang sudah ada pada class yang baru
+menerapkan konsep pewarisan data dan method dari class yang sudah ada pada class yang baru. Pada program ini menggunakan Hierarchical Irheritance yaitu tipe pewarisan di mana satu Superclass (Induk) diwarisi oleh lebih dari satu Subclass (Anak)
 
 Class PartKomputer menjadi parent yang mewarisi nama, stok, dan harga dan menggunakan method tampilkanSpesifikasi menggunakan
 get.Class().getSimpleName() untuk mendeteksi kategori yang diambil dari nama class secara otomatis
