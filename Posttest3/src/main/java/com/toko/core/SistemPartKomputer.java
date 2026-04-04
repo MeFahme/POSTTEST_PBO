@@ -17,7 +17,7 @@ public class SistemPartKomputer {
 
     void main() {
         listPart.add(new Processor("Intel i9 14900KF", 5, 7950000, "LGA1700"));
-        listPart.add(new GPU("RTX5060TI OC 8GB", 2, 7700000, 8));
+        listPart.add(new GPU("RTX5060TI OC 8GB", 2, 7700000, "ASUS"));
         listPart.add(new RAM("XPG 2X16GB 5600Mhz", 10, 5975000, "DDR5"));
 
         int pilihan;
@@ -91,42 +91,68 @@ public class SistemPartKomputer {
         System.out.println("| 3. RAM                                                |");
         System.out.println("---------------------------------------------------------");
         System.out.print("  Pilihan: ");
-        int jenis = input.nextInt();
-        input.nextLine();
 
-        System.out.print("  Masukkan Nama Part : ");
-        String nama = input.nextLine();
-        System.out.print("  Masukkan Stok      : ");
-        int stok = input.nextInt();
-        System.out.print("  Masukkan Harga     : ");
-        double harga = input.nextDouble();
-        input.nextLine();
-
-        if (jenis == 1) {
-            System.out.println("\n---------------------------------------------------------");
-            System.out.println("|              [ TAMBAH PROCESSOR BARU                  |");
-            System.out.println("---------------------------------------------------------");
-            System.out.print("  Masukkan Socket    : ");
-            String socket = input.nextLine();
-            listPart.add(new Processor(nama, stok, harga, socket));
-        } else if (jenis == 2) {
-            System.out.println("\n---------------------------------------------------------");
-            System.out.println("|                [ TAMBAH RAM BARU ]                    |");
-            System.out.println("---------------------------------------------------------");
-            System.out.print("   Masukkan VRAM (GB)     : ");
-            int vram = input.nextInt();
-            listPart.add(new GPU(nama, stok, harga, vram));
-        } else if (jenis == 3) {
-            System.out.println("\n---------------------------------------------------------");
-            System.out.println("|                [ TAMBAH RAM BARU ]                    |");
-            System.out.println("---------------------------------------------------------");
-            System.out.print("  Masukkan Tipe Memory     : ");
-            String tipe = input.next();
-            listPart.add(new RAM(nama, stok, harga, tipe));
-        } else {
-            listPart.add(new PartKomputer(nama, stok, harga));
+        int pilihan = -1;
+        if (input.hasNextInt()) {
+            pilihan = input.nextInt();
         }
-        System.out.println(">> Part berhasil ditambahkan!");
+        input.nextLine();
+
+        if (pilihan < 1 || pilihan > 3) {
+            System.out.println(">> Error: Pilihan tidak valid! Kembali ke menu utama.");
+            return;
+        }
+
+
+        switch (pilihan) {
+            case 1 -> {
+                System.out.println("\n---------------------------------------------------------");
+                System.out.println("|              [ TAMBAH PROCESSOR BARU ]                |");
+                System.out.println("---------------------------------------------------------");
+                System.out.print("  Masukkan Nama Part : ");
+                String nama = input.nextLine();
+                System.out.print("  Masukkan Stok      : ");
+                int stok = input.nextInt();
+                System.out.print("  Masukkan Harga     : ");
+                double harga = input.nextDouble();
+                input.nextLine();
+                System.out.print("  Masukkan Socket    : ");
+                String socket = input.nextLine();
+                listPart.add(new Processor(nama, stok, harga, socket));
+            }
+            case 2 -> {
+                System.out.println("\n---------------------------------------------------------");
+                System.out.println("|                [ TAMBAH GPU BARU ]                    |");
+                System.out.println("---------------------------------------------------------");
+                System.out.print("  Masukkan Nama Part : ");
+                String nama = input.nextLine();
+                System.out.print("  Masukkan Stok      : ");
+                int stok = input.nextInt();
+                System.out.print("  Masukkan Harga     : ");
+                double harga = input.nextDouble();
+                input.nextLine();
+                System.out.print("  Masukkan merk (GB) : ");
+                String merk = input.nextLine();
+                input.nextLine();
+                listPart.add(new GPU(nama, stok, harga, merk));
+            }
+            case 3 -> {
+                System.out.println("\n---------------------------------------------------------");
+                System.out.println("|                [ TAMBAH RAM BARU ]                    |");
+                System.out.println("---------------------------------------------------------");
+                System.out.print("  Masukkan Nama Part : ");
+                String nama = input.nextLine();
+                System.out.print("  Masukkan Stok      : ");
+                int stok = input.nextInt();
+                System.out.print("  Masukkan Harga     : ");
+                double harga = input.nextDouble();
+                input.nextLine();
+                System.out.print("  Masukkan Tipe Memory: ");
+                String tipe = input.nextLine();
+                listPart.add(new RAM(nama, stok, harga, tipe));
+            }
+        }
+        System.out.println(">> Berhasil ditambahkan.");
     }
 
     void updateHarga() {
