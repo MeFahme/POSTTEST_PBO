@@ -1,0 +1,15 @@
+com\mybakery\model\Produk.class
+com\mybakery\model\User.class
+com\mybakery\repository\AksesUser.class
+TestKoneksi.class
+com\mybakery\repository\OperasiData.class
+com\mybakery\repository\AksesProduk.class
+com\mybakery\MainApp.class
+com\mybakery\gui\controller\DashboardController.class
+com\mybakery\model\RotiBasah.class
+com\mybakery\model\RotiKering.class
+com\mybakery\model\Kasir.class
+com\mybakery\model\Admin.class
+com\mybakery\gui\controller\LoginController.class
+com\mybakery\AppLauncher.class
+com\mybakery\database\KoneksiDB.class
