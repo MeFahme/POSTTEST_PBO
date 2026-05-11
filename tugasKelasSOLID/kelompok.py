@@ -52,6 +52,9 @@ class ComputerShopApp:
         print("=== APLIKASI TOKO KOMPUTER (UN-SOLID) ===")
         # Memproses data
         self.part.process_part("save_and_notify", "member")
+
+        print("\nMencoba fitur RGB...")
+        self.part.set_rgb_lighting()
         
         # Mencoba fitur overclock (Akan menyebabkan CRASH karena pelanggaran LSP)
         print("\nMencoba fitur Overclock...")
