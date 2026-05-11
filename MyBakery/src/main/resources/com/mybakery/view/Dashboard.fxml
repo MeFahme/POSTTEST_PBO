@@ -12,13 +12,13 @@
                 </Label>
                 <Separator opacity="0.3" />
 
-                <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="📊 Dashboard">
+                <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="Dashboard">
                     <font><Font name="System Bold" size="13.0" /></font>
                 </Button>
 
-                <Button maxWidth="Infinity" onAction="#menuKelolaProduk" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="🍞 Kelola Produk" />
+                <Button maxWidth="Infinity" onAction="#menuKelolaProduk" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="Kelola Produk" />
 
-                <Button maxWidth="Infinity" onAction="#menuTransaksi" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="💰 Transaksi" />
+                <Button maxWidth="Infinity" onAction="#menuTransaksi" style="-fx-background-color: transparent; -fx-text-fill: #FFECB3; -fx-alignment: CENTER_LEFT; -fx-cursor: hand;" text="Transaksi" />
 
                 <Region VBox.vgrow="ALWAYS" />
 
